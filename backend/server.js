@@ -49,6 +49,7 @@ initDatabase().then(() => {
 // CORS
 app.use(cors({
   origin: function (origin, callback) {
+    // Разрешаем запросы без origin (curl, postman, серверные запросы)
     if (!origin) return callback(null, true);
     
     const allowedOrigins = [
@@ -58,14 +59,29 @@ app.use(cors({
       'http://127.0.0.1:3001',
       'http://localhost:5173',
       'http://127.0.0.1:5173',
+      // Production URLs
+      'https://spravka904.ru',
+      'http://spravka904.ru',
+      'https://www.spravka904.ru',
+      'http://www.spravka904.ru',
+      // IP адрес сервера
+      'http://155.212.216.198',
+      'https://155.212.216.198',
+      // Переменная окружения
       process.env.FRONTEND_URL
     ].filter(Boolean);
+
+    console.log('CORS check:', {
+      origin,
+      allowedOrigins,
+      isAllowed: allowedOrigins.includes(origin)
+    });
 
     if (allowedOrigins.includes(origin)) {
       return callback(null, true);
     } else {
       console.log('CORS blocked for origin:', origin);
-      return callback(new Error('Not allowed by CORS'));
+      return callback(new Error('Not allowed by CORS'), false);
     }
   },
   credentials: true,
