@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Gilroy.otf);
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url(../fonts/Gilroy-Light.otf);
+}
+
+
+.access-denied-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.access-denied-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.access-denied-content {
+  padding: 40px;
+  border-radius: 30px;
+  background: rgba(48, 53, 55, 0.9);
+  width: 350px;
+  margin: auto;
+  border: 5px outset white;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+  text-align: center;
+}
+
+.access-denied-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.access-denied-content h1 {
+  font-family: 'Title';
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.denied-message {
+  font-family: 'Text';
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.help-me {
+  font-family: 'Text';
+  font-style: italic;
+  color: #ffffff;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.help-me-phone {
+  font-family: 'Text';
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #000000;
+}

@@ -1,0 +1,503 @@
+.operator-dashboard {
+  padding: 20px;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.operator-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.operator-dashboard-title h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.operator-dashboard-title p {
+  color: #888;
+  font-size: 14px;
+}
+
+.operator-dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.operator-notifications-count {
+  color: #888;
+  font-size: 14px;
+}
+
+.operator-notifications-badge {
+  background-color: #ef4444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.operator-refresh-btn {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.operator-refresh-btn:hover:not(:disabled) {
+  background-color: #444;
+}
+
+.operator-refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.operator-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* ИЗМЕНЕНИЕ: Новая структура grid для контента */
+.operator-dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* Левая часть - 40%, правая - 60% */
+  gap: 30px;
+}
+
+/* Левая часть - Графики */
+.operator-charts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.operator-chart-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #333;
+  min-height: 250px; /* Фиксированная высота для графиков */
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Запрещаем сжатие заголовка */
+}
+
+.operator-chart-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.operator-chart-subtitle {
+  font-size: 12px;
+  color: #888;
+}
+
+.operator-chart-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Занимает все доступное пространство */
+  color: #888;
+}
+
+.operator-loading-spinner {
+  font-size: 24px;
+  margin-bottom: 10px;
+  animation: spin 1s linear infinite;
+}
+
+/* Правая часть - Боковая панель */
+.operator-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.operator-recent-card,
+.operator-quick-actions-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Высота 100% для равного распределения */
+}
+
+.operator-recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-shrink: 0; /* Запрещаем сжатие заголовка */
+}
+
+.operator-recent-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.operator-view-all-btn {
+  background: none;
+  border: none;
+  color: #4dabf7;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+.operator-view-all-btn:hover {
+  text-decoration: underline;
+}
+
+.operator-recent-list {
+  flex: 1; /* Занимает все доступное пространство */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Скрываем прокрутку */
+}
+
+/* ОБНОВЛЕНИЕ: Улучшаем таблицу в последних заявках */
+.operator-recent-list .operator-data-table-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-recent-list .operator-data-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-recent-list .operator-data-table-body {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 300px; /* Максимальная высота для таблицы */
+}
+
+.operator-recent-list .operator-data-table-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.operator-recent-list .operator-data-table-body::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 3px;
+}
+
+.operator-recent-list .operator-data-table-body::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.operator-recent-list .operator-data-table-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.operator-loading-text,
+.operator-no-data {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ОБНОВЛЕНИЕ: Улучшаем быстрые действия */
+.operator-quick-actions-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0 0 15px 0;
+}
+
+.operator-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  flex: 1; /* Занимает все доступное пространство */
+}
+
+.operator-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  height: 60px; /* Фиксированная высота для кнопок */
+}
+
+.operator-action-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.operator-action-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.operator-action-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.operator-action-badge {
+  background-color: #ef4444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Стили для статусов заявок */
+.operator-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px;
+}
+
+.operator-status-new {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.operator-status-in_progress {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.operator-status-completed {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Анимация для спиннера */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .operator-dashboard-content {
+    grid-template-columns: 1fr 1fr; /* 50/50 на средних экранах */
+  }
+}
+
+@media (max-width: 992px) {
+  .operator-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .operator-dashboard-content {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+  }
+  
+  .operator-dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .operator-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .operator-recent-list .operator-data-table-body {
+    max-height: 200px; /* Меньшая высота на мобильных */
+  }
+}
+
+@media (max-width: 480px) {
+  .operator-dashboard {
+    padding: 15px;
+  }
+  
+  .operator-chart-card,
+  .operator-recent-card,
+  .operator-quick-actions-card {
+    padding: 15px;
+  }
+  
+  .operator-action-btn {
+    padding: 12px;
+    height: 55px;
+  }
+}
+
+/* Дополнительные стили для реальных данных */
+.operator-dashboard-subtitle {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.operator-realtime-info {
+  background: #e8f5e9;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #2e7d32;
+}
+
+.operator-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.operator-chart-total {
+  font-size: 14px;
+  color: #666;
+  background: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.operator-recent-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.operator-recent-count {
+  font-size: 12px;
+  color: #666;
+}
+
+.operator-empty-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+.operator-retry-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.operator-retry-btn:hover {
+  background: #e0e0e0;
+}
+
+.operator-small-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.operator-action-count {
+  margin-left: auto;
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.operator-dashboard-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.operator-data-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.operator-data-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operator-data-indicator.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.operator-data-indicator.loading {
+  background: #fff3e0;
+  color: #f57c00;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

@@ -1,0 +1,151 @@
+.operator-data-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.operator-data-table-compact .operator-data-table {
+  font-size: 13px;
+}
+
+.operator-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  display: table;
+}
+
+/* ОБНОВЛЕНИЕ: Для использования внутри списка последних заявок */
+.operator-data-table-container--auto-height {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-data-table-container--auto-height .operator-data-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-data-table-container--auto-height .operator-data-table-header {
+  flex-shrink: 0;
+}
+
+.operator-data-table-container--auto-height .operator-data-table-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.operator-data-table-header {
+  background-color: #2d2d2d;
+  flex-shrink: 0;
+}
+
+.operator-data-table-th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #888;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+  white-space: nowrap;
+}
+
+.operator-actions-column {
+  width: 100px;
+  text-align: center;
+}
+
+.operator-data-table-body {
+  background-color: #1f1f1f;
+  flex: 1;
+}
+
+.operator-data-table-row {
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s;
+}
+
+.operator-data-table-row:hover {
+  background-color: #2d2d2d;
+}
+
+.operator-data-table-row--clickable {
+  cursor: pointer;
+}
+
+.operator-data-table-row--clickable:hover {
+  background-color: #2d2d2d;
+}
+
+.operator-data-table-td {
+  padding: 12px 15px;
+  color: #e0e0e0;
+  font-size: 14px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.operator-actions-cell {
+  text-align: center;
+}
+
+.operator-data-table-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  color: #888;
+}
+
+.operator-data-table-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для компактного режима */
+.operator-data-table-compact .operator-data-table-th,
+.operator-data-table-compact .operator-data-table-td {
+  padding: 8px 10px;
+}
+
+.operator-data-table-compact .operator-data-table-th {
+  font-size: 11px;
+}
+
+.operator-data-table-compact .operator-data-table-td {
+  font-size: 12px;
+}
+
+/* Стили для таблицы внутри списка последних заявок */
+.operator-recent-list .operator-data-table-th {
+  background-color: #2d2d2d;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Адаптивность для таблицы в дашборде */
+@media (max-width: 768px) {
+  .operator-data-table-container {
+    overflow-x: auto;
+  }
+  
+  .operator-data-table-td {
+    max-width: 150px;
+  }
+}

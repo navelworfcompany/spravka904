@@ -1,0 +1,284 @@
+/* CreateProductModal.css */
+.create-product-form-ad-p {
+  color: #e5e5e5;
+}
+
+.form-row-ad-p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group-ad-p {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label-ad-p {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.form-input-ad-p,
+.form-textarea-ad-p {
+  background: #363636;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input-ad-p:focus,
+.form-textarea-ad-p:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-input-ad-p.error-ad-p {
+  border-color: #ef4444;
+}
+
+.form-textarea-ad-p {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-text-ad-p {
+  color: #ef4444;
+  font-size: 0.8rem;
+}
+
+.select-with-clear-ad-p {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-select-ad-p {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  flex: 1;
+}
+
+.form-select-ad-p:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.clear-selection-btn-ad-p {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-selection-btn-ad-p:hover {
+  color: #dc3545;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.selected-value-ad-p {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selected-label-ad-p {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.selected-tag-ad-p {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #e9ecef;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #495057;
+  border: 1px solid #007bff;
+}
+
+.tag-remove-ad-p {
+  margin-left: 4px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-remove-ad-p:hover {
+  color: #dc3545;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.type-info-ad-p {
+  background: #363636;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+.submit-error-ad-p {
+  background: #ef4444;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.form-actions-ad-p {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #404040;
+}
+
+.cancel-btn-ad-p,
+.submit-btn-ad-p {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn-ad-p {
+  background: #6b7280;
+  color: white;
+}
+
+.cancel-btn-ad-p:hover {
+  background: #4b5563;
+}
+
+.submit-btn-ad-p {
+  background: #10b981;
+  color: white;
+}
+
+.submit-btn-ad-p:hover:not(:disabled) {
+  background: #059669;
+}
+
+.submit-btn-ad-p:disabled,
+.cancel-btn-ad-p:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.image-upload-section-ad-p {
+  margin-bottom: 1rem;
+}
+
+.image-upload-area-ad-p {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.image-upload-area-ad-p:hover {
+  border-color: #007bff;
+}
+
+.image-upload-input-ad-p {
+  display: none;
+}
+
+.image-upload-label-ad-p {
+  cursor: pointer;
+  display: block;
+}
+
+.upload-placeholder-ad-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upload-icon-ad-p {
+  font-size: 2rem;
+}
+
+.upload-text-ad-p {
+  font-weight: 500;
+  color: #333;
+}
+
+.upload-hint-ad-p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.image-preview-ad-p {
+  text-align: center;
+}
+
+.preview-image-ad-p {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.remove-image-btn-ad-p {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-image-btn-ad-p:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .form-row-ad-p {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions-ad-p {
+    flex-direction: column;
+  }
+}

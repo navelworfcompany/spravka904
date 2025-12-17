@@ -1,0 +1,55 @@
+/* src/admin/components/Layout/AdminLayout.css */
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #1a1a1a;
+}
+
+.admin-notifications {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.admin-access-denied {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: white;
+}
+
+.access-denied-card {
+  background: #2d2d2d;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #ef4444;
+}
+
+.access-denied-card h2 {
+  margin: 0 0 15px 0;
+  color: #ef4444;
+}
+
+.access-denied-card p {
+  margin: 5px 0;
+  color: #ccc;
+}

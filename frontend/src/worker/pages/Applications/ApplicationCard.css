@@ -1,0 +1,421 @@
+/* Основная карточка */
+.application-app-work-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  transition: box-shadow 0.2s ease;
+}
+
+.application-app-work-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Шапка карточки */
+.application-app-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.application-app-work-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.application-app-work-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.application-app-work-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.application-app-work-date {
+  font-size: 0.875rem;
+  color: #aaa;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Бейдж статуса */
+.status-app-work-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.status-app-work-new {
+  background-color: rgba(33, 150, 243, 0.2);
+  color: #90caf9;
+}
+
+.status-app-work-pending {
+  background-color: rgba(255, 167, 38, 0.2);
+  color: #ffb74d;
+}
+
+.status-app-work-in-progress {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #81c784;
+}
+
+.status-app-work-assigned {
+  background-color: rgba(186, 104, 200, 0.2);
+  color: #ce93d8;
+}
+
+.status-app-work-completed {
+  background-color: rgba(76, 175, 80, 0.25);
+  color: #a5d6a7;
+}
+
+.status-app-work-cancelled {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #ef9a9a;
+}
+
+.status-app-work-default {
+  background-color: rgba(158, 158, 158, 0.2);
+  color: #bdbdbd;
+}
+
+/* Детали заявки */
+.application-app-work-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-app-work-item {
+  font-size: 0.9375rem;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+.detail-app-work-item strong {
+  color: #e0e0e0;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Комментарий */
+.application-app-work-comment {
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #444;
+}
+
+.application-app-work-comment strong {
+  color: #e0e0e0;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.application-app-work-comment p {
+  margin: 0;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* Ответ работника */
+.application-app-work-response {
+  background-color: #1a2a3a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2196f3;
+}
+
+.response-app-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.response-app-work-header strong {
+  color: #90caf9;
+  font-weight: 600;
+}
+
+.response-app-work-date {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.response-app-work-text {
+  margin: 0 0 1rem 0;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+.response-app-work-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.response-app-work-price,
+.response-app-work-deadline {
+  font-size: 0.9375rem;
+  color: #aaa;
+}
+
+.response-app-work-price strong,
+.response-app-work-deadline strong {
+  color: #e0e0e0;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Кнопки действий */
+.application-app-work-actions {
+  margin-top: 1.5rem;
+}
+
+.respond-app-work-button {
+  width: 100%;
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  color: white;
+  border: none;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.respond-app-work-button:hover {
+  background: linear-gradient(135deg, #1565c0, #0a3d91);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+/* Форма ответа */
+.response-app-work-form {
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #444;
+}
+
+.response-app-work-form h4 {
+  margin: 0 0 1rem 0;
+  color: #e0e0e0;
+  font-size: 1.125rem;
+}
+
+.form-app-work-group {
+  margin-bottom: 1rem;
+}
+
+.form-app-work-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.form-app-work-group textarea,
+.form-app-work-group input {
+  width: 100%;
+  padding: 0.75rem;
+  background: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: #e0e0e0;
+  transition: border-color 0.2s ease;
+}
+
+.form-app-work-group textarea:focus,
+.form-app-work-group input:focus {
+  outline: none;
+  border-color: #2196f3;
+  background: #333;
+}
+
+.form-app-work-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-app-work-group input::placeholder {
+  color: #777;
+}
+
+.form-app-work-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Кнопки формы */
+.response-app-work-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.response-app-work-actions button {
+  flex: 1;
+}
+
+/* Кнопки для заявок в работе */
+.in-progress-app-work-actions {
+  margin-top: 1rem;
+}
+
+.in-progress-app-work-actions button {
+  width: 100%;
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  color: white;
+  border: none;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.in-progress-app-work-actions button:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .application-app-work-card {
+    padding: 1.25rem;
+  }
+  
+  .application-app-work-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .application-app-work-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .application-app-work-title {
+    font-size: 1.125rem;
+  }
+  
+  .application-app-work-date {
+    align-self: flex-end;
+    margin-top: 0;
+  }
+  
+  .form-app-work-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .response-app-work-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Стили для элементов Button компонента (если используются) */
+.btn-outline {
+  background: transparent;
+  border: 2px solid #444;
+  color: #e0e0e0;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #555;
+}
+
+.btn-success {
+  background: #388e3c;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #2e7d32;
+}
+
+/* Стили для Loading состояния */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.loading {
+  position: relative;
+  color: transparent;
+}
+
+button.loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.8s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.application-status-info {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.status-badge.responded {
+  background-color: #075e0a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}

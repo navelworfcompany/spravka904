@@ -1,0 +1,95 @@
+/* src/admin/components/UI/DataTable.css */
+.data-table-container {
+  background: #2d2d2d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-header {
+  background: #363636;
+  border-bottom: 1px solid #404040;
+}
+
+.data-table-th {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 500;
+  color: #ccc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.actions-column {
+  width: 120px;
+  text-align: center;
+}
+
+.data-table-body {
+  background: #2d2d2d;
+}
+
+.data-table-row {
+  border-bottom: 1px solid #404040;
+  transition: background 0.3s ease;
+}
+
+.data-table-row:hover {
+  background: #363636;
+}
+
+.data-table-row--clickable {
+  cursor: pointer;
+}
+
+.data-table-row--clickable:hover {
+  background: #3f0764c2;
+}
+
+.data-table-td {
+  padding: 12px;
+  color: #e5e5e5;
+  font-size: 0.9rem;
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+.data-table-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  color: #666;
+}
+
+.data-table-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  color: #666;
+  font-style: italic;
+}
+
+.loading-spinner {
+  font-size: 1.5rem;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,1190 @@
+/* src/components/client/user-applications.css */
+
+/* Основные стили с уникальными классами */
+.user-applications-page-c {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #e0e0e0;
+}
+
+.user-applications-main-c {
+  padding: 2rem 1rem;
+}
+
+.container-c {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок страницы */
+.page-header-c {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.page-header-c h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #fff 0%, #667eea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-header-c p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Состояние загрузки */
+.loading-container-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Пустое состояние */
+.empty-state-c {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed #333;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.empty-icon-c {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.empty-state-c h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.empty-state-c p {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Статистика */
+.applications-stats-c {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card-c {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card-c:hover {
+  transform: translateY(-3px);
+  border-color: #667eea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label-c {
+  display: block;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.stat-number-c {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+  line-height: 1;
+}
+
+/* Список заявок */
+.applications-list-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.application-card-c {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-card-c:hover {
+  transform: translateY(-2px);
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.application-card-c::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.application-card-content-c {
+  display: flex;
+  align-items: stretch;
+  min-height: 180px;
+}
+
+/* Изображение товара */
+.application-image-container-c {
+  width: 200px;
+  flex-shrink: 0;
+  border-right: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.application-image-c {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
+/* Информация о заявке */
+.application-info-c {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.application-header-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.application-title-section-c {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.application-title-c {
+  color: #fff;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.application-date-c {
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Бейджи статусов */
+.status-badge-c {
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.status-new-c {
+  background: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.status-pending-c {
+  background: rgba(155, 89, 182, 0.2);
+  color: #9b59b6;
+  border: 1px solid rgba(155, 89, 182, 0.3);
+}
+
+.status-in-progress-c {
+  background: rgba(243, 156, 18, 0.2);
+  color: #f39c12;
+  border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+.status-completed-c {
+  background: rgba(39, 174, 96, 0.2);
+  color: #27ae60;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.status-cancelled-c {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Превью заявки */
+.application-preview-c {
+  margin-bottom: 1rem;
+}
+
+.preview-row-c {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.preview-row-c:last-child {
+  margin-bottom: 0;
+}
+
+.preview-row-c .label-c {
+  color: #b0b0b0;
+  min-width: 80px;
+  font-weight: 500;
+}
+
+.preview-row-c .value-c {
+  color: #fff;
+  margin-left: 1rem;
+  flex: 1;
+}
+
+/* Ответы работников */
+.responses-preview-c {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.responses-count-c {
+  color: #667eea;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.responses-icon-c {
+  font-size: 0.9rem;
+}
+
+.choose-executor-badge-c {
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+.selected-executor-preview-c {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(39, 174, 96, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.selected-label-c {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+}
+
+.selected-name-c {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Стрелка для клика */
+.application-arrow-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  color: #667eea;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.application-card-c:hover .application-arrow-c {
+  transform: translateX(5px);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+/* Модальное окно UA (User Applications) */
+.ua-modal-overlay-c {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+  animation: ua-fadeIn-c 0.2s ease-out;
+}
+
+@keyframes ua-fadeIn-c {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ua-modal-c {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: ua-slideIn-c 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+@keyframes ua-slideIn-c {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Размеры модальных окон */
+.ua-modal-small-c {
+  width: 400px;
+  max-width: 95vw;
+}
+
+.ua-modal-medium-c {
+  width: 600px;
+  max-width: 95vw;
+}
+
+.ua-modal-large-c {
+  width: 900px;
+  max-width: 95vw;
+}
+
+.ua-modal-xlarge-c {
+  width: 1200px;
+  max-width: 95vw;
+}
+
+/* Заголовок модального окна */
+.ua-modal-header-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.ua-modal-title-c {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #fff 0%, #667eea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ua-modal-close-c {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ua-modal-close-c:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Контент модального окна */
+.ua-modal-content-c {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  max-height: calc(90vh - 80px);
+}
+
+.ua-modal-content-c::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ua-modal-content-c::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+.ua-modal-content-c::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.ua-modal-content-c::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Действия в модальном окне */
+.ua-modal-actions-c {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+/* Детали заявки */
+.application-details-c {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Шапка с изображением */
+.details-header-c {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid #333;
+}
+
+.product-image-section-c {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.product-detail-image-c {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border: 1px solid #333;
+}
+
+.product-info-section-c {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-title-c {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-meta-c {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-type-c {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.product-material-c,
+.product-size-c {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+
+.application-status-section-c {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.status-badge-large-c {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.creation-date-c {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Детальные секции */
+.details-sections-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.details-section-c {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border-left: 3px solid #667eea;
+}
+
+.details-section-c h4 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.details-section-c h4::before {
+  content: '📋';
+  font-size: 1.1rem;
+}
+
+.selected-executor-section-c h4::before {
+  content: '👤';
+}
+
+.details-grid-c {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.detail-item-c {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-label-c {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.detail-value-c {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Выбранный исполнитель */
+.executor-info-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.executor-detail-c {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.executor-label-c {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.executor-value-c {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.executor-value-price-c {
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+.executor-value-deadline-c {
+  color: #f39c12;
+}
+
+/* Комментарий пользователя */
+.comment-box-c {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ответы работников */
+.responses-header-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.choose-executor-hint-c {
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hint-icon-c {
+  font-size: 0.9rem;
+}
+
+.responses-list-c {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.response-item-c {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.response-item-c:hover {
+  background: rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.response-item-chosen-c {
+  background: rgba(39, 174, 96, 0.1);
+  border-color: rgba(39, 174, 96, 0.3);
+  border-left-width: 4px;
+  border-left-color: #27ae60;
+}
+
+.response-header-c {
+  margin-bottom: 1rem;
+}
+
+.response-worker-info-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.response-worker-name-c {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chosen-badge-c {
+  background: #27ae60;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.response-date-c {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Контент ответа */
+.response-content-c {
+  margin-bottom: 1.5rem;
+}
+
+.response-text-section-c {
+  margin-bottom: 1.5rem;
+}
+
+.response-text-section-c h5 {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.response-text-section-c h5::before {
+  content: '💬';
+  font-size: 0.9rem;
+}
+
+.response-text-c {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Цена и срок исполнения */
+.response-offer-details-c {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.offer-detail-c {
+  flex: 1;
+  min-width: 200px;
+}
+
+.offer-label-c {
+  display: block;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.offer-value-c {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.offer-value-price-c {
+  color: #27ae60;
+  font-size: 1.3rem;
+}
+
+.offer-value-deadline-c {
+  color: #f39c12;
+  font-size: 1.1rem;
+}
+
+/* Кнопка выбора исполнителя */
+.choose-executor-section-c {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Нет ответов */
+.no-responses-c {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px dashed #333;
+  color: #b0b0b0;
+}
+
+.no-responses-icon-c {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-responses-c h5 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.no-responses-subtitle-c {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Подтверждение выбора исполнителя */
+.confirm-executor-modal-c {
+  padding: 1.5rem;
+}
+
+.confirmation-content-c {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.warning-icon-c {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: ua-pulse-c 2s infinite;
+}
+
+@keyframes ua-pulse-c {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.confirmation-content-c h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.executor-details-c {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border: 1px solid #333;
+}
+
+.detail-row-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.detail-row-c:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.confirmation-note-c {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  text-align: left;
+  border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.confirmation-note-c p {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #3498db;
+  font-size: 1rem;
+}
+
+.confirmation-note-c ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.confirmation-note-c li {
+  margin-bottom: 0.5rem;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.confirmation-actions-c {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.choose-wok {
+  color: #fff !important;
+}
+
+/* Анимации */
+@keyframes ua-fadeInUp-c {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.application-card-c {
+  animation: ua-fadeInUp-c 0.4s ease-out;
+}
+
+.applications-list-c > *:nth-child(1) { animation-delay: 0.1s; }
+.applications-list-c > *:nth-child(2) { animation-delay: 0.2s; }
+.applications-list-c > *:nth-child(3) { animation-delay: 0.3s; }
+.applications-list-c > *:nth-child(4) { animation-delay: 0.4s; }
+.applications-list-c > *:nth-child(5) { animation-delay: 0.5s; }
+
+.status-assigned-c {
+  background: rgba(89, 182, 97, 0.2);
+  color: #59b669;
+  border: 1px solid rgba(89, 182, 101, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .user-applications-main-c {
+    padding: 1rem 0.5rem;
+  }
+
+  .page-header-c h1 {
+    font-size: 2rem;
+  }
+
+  .applications-stats-c {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .application-card-content-c {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .application-image-container-c {
+    width: 100%;
+    height: 150px;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .application-image-c {
+    height: 120px;
+  }
+
+  .application-header-c {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .application-arrow-c {
+    display: none;
+  }
+
+  .details-header-c {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .product-image-section-c {
+    width: 100%;
+  }
+
+  .product-detail-image-c {
+    height: 150px;
+  }
+
+  .application-status-section-c {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .response-offer-details-c {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .offer-detail-c {
+    min-width: 100%;
+  }
+
+  .responses-header-c {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .confirmation-actions-c {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .confirmation-actions-c button {
+    width: 100%;
+  }
+
+  .ua-modal-large-c,
+  .ua-modal-medium-c,
+  .ua-modal-small-c {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-c h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header-c p {
+    font-size: 1rem;
+  }
+
+  .empty-state-c {
+    padding: 2rem 1rem;
+  }
+
+  .applications-stats-c {
+    grid-template-columns: 1fr;
+  }
+
+  .application-info-c {
+    padding: 1.25rem;
+  }
+
+  .application-title-c {
+    font-size: 1.1rem;
+  }
+
+  .ua-modal-header-c {
+    padding: 1rem;
+  }
+
+  .ua-modal-title-c {
+    font-size: 1.2rem;
+  }
+
+  .ua-modal-content-c {
+    padding: 1rem;
+  }
+}
+
+/* user-applications.css - добавьте эти стили */
+
+/* Кнопка отмены заявки */
+.cancel-application-btn {
+  background: #f44336;
+  color: white;
+  border: 1px solid #d32f2f;
+}
+
+.cancel-application-btn:hover {
+  background: #d32f2f;
+  border-color: #b71c1c;
+}
+
+/* Модальное окно подтверждения отмены */
+.confirm-cancel-modal-c {
+  padding: 20px;
+}
+
+.cancel-details-c {
+  background: #3d3d3d;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.cancel-note-c ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.cancel-note-c li {
+  margin-bottom: 5px;
+  color: #666;
+  text-align: left;
+}
+
+/* Адаптивность для кнопок в модальном окне */
+.ua-modal-actions-c {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+.btn-can-c {
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .ua-modal-actions-c {
+    flex-direction: column;
+  }
+  
+  .ua-modal-actions-c .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

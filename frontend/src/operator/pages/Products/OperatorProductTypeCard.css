@@ -1,0 +1,148 @@
+.operator-product-type-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.operator-product-type-card:hover {
+  border-color: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.operator-product-type-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.operator-type-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+  flex: 1;
+}
+
+.operator-type-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.operator-action-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.operator-view-btn {
+  color: #4dabf7;
+  background-color: rgba(77, 171, 247, 0.1);
+  border: 1px solid rgba(77, 171, 247, 0.2);
+}
+
+.operator-view-btn:hover {
+  background-color: rgba(77, 171, 247, 0.2);
+}
+
+.operator-product-type-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-type-image-section {
+  margin-bottom: 15px;
+}
+
+.operator-type-image-display {
+  width: 100%;
+  height: 150px;
+  background-color: #2d2d2d;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operator-type-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.operator-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #666;
+}
+
+.operator-placeholder-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.operator-placeholder-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.operator-type-description {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.operator-type-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  margin-top: auto;
+}
+
+.operator-stat-item-op {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.operator-stat-label-op {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.operator-stat-value-op {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+}

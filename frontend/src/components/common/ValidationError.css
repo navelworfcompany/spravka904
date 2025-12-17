@@ -1,0 +1,134 @@
+.validation-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 4px;
+  animation: slideDown 0.2s ease-out;
+}
+
+.validation-error-below {
+  flex-direction: row;
+  align-items: center;
+}
+
+.validation-error-inline {
+  display: inline-flex;
+  margin-left: 8px;
+}
+
+.validation-error-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--danger-color);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.validation-error-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background: var(--danger-color);
+  transform: rotate(45deg);
+}
+
+.validation-error-icon {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.validation-error-message {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Анимации */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+.validation-error-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Состояния для полей ввода с ошибками */
+.form-group.has-error input,
+.form-group.has-error textarea,
+.form-group.has-error select {
+  border-color: var(--danger-color);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+.form-group.has-error .validation-error {
+  animation: slideDown 0.2s ease-out, shake 0.3s ease-in-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .validation-error {
+    gap: 4px;
+  }
+
+  .validation-error-message {
+    font-size: 0.75rem;
+  }
+
+  .validation-error-tooltip {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    margin: 0;
+  }
+
+  .validation-error-tooltip::before {
+    display: none;
+  }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .validation-error-message {
+    color: #ff6b6b;
+  }
+
+  .validation-error-tooltip {
+    background: #c0392b;
+  }
+
+  .validation-error-tooltip::before {
+    background: #c0392b;
+  }
+}

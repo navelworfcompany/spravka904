@@ -1,0 +1,319 @@
+/* src/admin/pages/Users/UsersList.css */
+.users-page-adm-us {
+  padding: 0;
+  min-height: 100vh;
+  color: #e0e0e0;
+}
+
+.page-header-adm-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.header-content-adm-us h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-content-adm-us p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.header-actions-adm-us {
+  display: flex;
+  gap: 12px;
+}
+
+.create-user-btn-adm-us {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.create-user-btn-adm-us:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.create-user-btn-adm-us:active {
+  transform: translateY(0);
+}
+
+.role-stats-adm-us {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.role-stats-adm-us h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-stats-adm-us h3::before {
+  content: '📊';
+  font-size: 1rem;
+}
+
+.stats-grid-adm-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #2d2d2d;
+}
+
+.stats-grid-adm-us::-webkit-scrollbar {
+  height: 6px;
+}
+
+.stats-grid-adm-us::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 3px;
+}
+
+.stats-grid-adm-us::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.role-stat-card-adm-us {
+  background: linear-gradient(135deg, #2d2d2d 0%, #363636 100%);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 120px;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-stat-card-adm-us:hover {
+  transform: translateY(-2px);
+  border-color: #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.role-stat-card-adm-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.role-name-adm-us {
+  font-size: 0.85rem;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.role-count-adm-us {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.results-info-adm-us {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+  border-left: 4px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.results-info-adm-us::before {
+  content: '🔍';
+  font-size: 1rem;
+}
+
+.results-info-adm-us strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.users-loading-adm-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.loading-spinner-adm-us {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  animation: spin-adm-us 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin-adm-us {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.users-loading-adm-us p {
+  color: #aaa;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.users-grid-adm-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.no-users-adm-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px dashed #444;
+  text-align: center;
+}
+
+.no-users-icon-adm-us {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  filter: grayscale(0.5);
+}
+
+.no-users-adm-us h3 {
+  margin: 0 0 12px 0;
+  color: #ddd;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.no-users-adm-us p {
+  margin: 0 0 24px 0;
+  color: #aaa;
+  font-size: 0.95rem;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .stats-grid-adm-us {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .role-stat-card-adm-us {
+    min-width: calc(25% - 12px);
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-adm-us {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .header-actions-adm-us {
+    justify-content: center;
+  }
+  
+  .users-grid-adm-us {
+    grid-template-columns: 1fr;
+  }
+  
+  .role-stat-card-adm-us {
+    min-width: calc(50% - 12px);
+    margin-bottom: 8px;
+  }
+  
+  .stats-grid-adm-us {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-stat-card-adm-us {
+    min-width: 100%;
+  }
+  
+  .create-user-btn-adm-us {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+
+/* Темная тема улучшения */
+@media (prefers-color-scheme: dark) {
+  .role-stat-card-adm-us {
+    background: linear-gradient(135deg, #252525 0%, #2d2d2d 100%);
+  }
+  
+  .page-header-adm-us {
+    background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
+  }
+  
+  .role-count-adm-us {
+    text-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  }
+}

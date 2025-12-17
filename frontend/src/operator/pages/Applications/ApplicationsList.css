@@ -1,0 +1,202 @@
+.operator-applications-page {
+  padding: 20px;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.operator-page-header {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+.operator-header-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.operator-header-content p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.operator-header-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.operator-total-count,
+.operator-active-count {
+  background-color: #2d2d2d;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.operator-total-count strong,
+.operator-active-count strong {
+  color: #e0e0e0;
+  margin-left: 5px;
+}
+
+.operator-application-id {
+  font-weight: 600;
+  color: #4dabf7;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.operator-deletion-warning {
+  color: #f59e0b;
+  font-size: 12px;
+}
+
+.operator-client-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-client-name {
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 2px;
+}
+
+.operator-client-phone {
+  font-size: 12px;
+  color: #888;
+}
+
+.operator-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px;
+}
+
+.operator-status-new {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.operator-status-in_progress {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.operator-status-completed {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.operator-status-for_delete {
+  background-color: rgba(156, 163, 175, 0.2);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.operator-response-count {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.operator-has-responses {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.operator-table-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.operator-action-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.operator-view-btn {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.operator-view-btn:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.operator-start-btn {
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.operator-start-btn:hover {
+  background-color: rgba(245, 158, 11, 0.2);
+}
+
+.operator-complete-btn {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.operator-complete-btn:hover {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.operator-mark-deletion-btn {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.operator-mark-deletion-btn:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.operator-restore-btn {
+  color: #8b5cf6;
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.operator-restore-btn:hover {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+.operator-pagination-info {
+  margin-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  border-radius: 6px;
+  border: 1px solid #333;
+}

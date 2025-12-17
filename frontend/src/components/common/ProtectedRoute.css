@@ -1,0 +1,113 @@
+.protected-route-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.access-denied {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.access-denied-content {
+  text-align: center;
+  max-width: 500px;
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.access-denied-content h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.access-denied-content p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  text-align: left;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.user-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.role-admin {
+  background-color: #dc3545;
+  color: white;
+}
+
+.role-operator {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.role-worker {
+  background-color: #20c997;
+  color: white;
+}
+
+.role-user {
+  background-color: #6c757d;
+  color: white;
+}
+
+.required-role {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  background: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.access-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .access-denied {
+    padding: 1rem;
+  }
+  
+  .access-denied-content {
+    padding: 2rem 1rem;
+  }
+  
+  .user-info p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .access-actions {
+    flex-direction: column;
+  }
+}

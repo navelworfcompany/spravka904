@@ -1,0 +1,308 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Gilroy.otf);
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url(../fonts/Gilroy-Light.otf);
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background: linear-gradient(to bottom, #ffffff, #373C3F);
+}
+
+.client-page {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    max-width: 1920px;
+    background-color: rgb(48, 53, 55);
+}
+
+.main {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: url(../img/bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.half {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 800px;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 30px;
+    background: rgba(48, 53, 55, 0.9);
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    border: 5px outset white;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
+
+.title {
+    width: 100%;
+    font-family: 'Title';
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 25px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.text {
+    width: 100%;
+    font-family: 'Text';
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 20px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.button-order {
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 75px;
+    background: #D13980;
+    font-family: 'Text';
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px ridge #000000;
+    text-shadow: 1px 1px 1px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-order::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 300px;
+    margin-left: -100px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    opacity: 0.5;
+    position: absolute;
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: all 10s;
+    animation-name: slideme;
+    animation-duration: 8s;
+    /* 10s пауза + 3s анимация */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slideme {
+    0% {
+        left: -50px;
+        margin-left: 0px;
+    }
+
+    9% {
+        /* 3s / 13s ≈ 23% */
+        left: 120%;
+        margin-left: 80px;
+    }
+
+    100% {
+        left: 120%;
+        margin-left: 80px;
+    }
+}
+
+.button-order:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 10px 10px rgb(255, 114, 213);
+}
+
+.block2 {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 30px;
+    background: rgba(48, 53, 55, 0.9);
+    width: 350px;
+    height: 100px;
+    margin: auto;
+    border: 5px outset white;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
+
+.block2:hover {
+    cursor: pointer;
+    transform: translateY(8px);
+    box-shadow: 0 0 10px 10px rgb(255, 114, 213);
+}
+
+.phone {
+    width: 50px;
+    height: 50px;
+    background: url(../img/call-me-0.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: phone;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes phone {
+    0% {
+        background: url(../img/call-me-0.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+        2% {
+        background: url(../img/call-me-0.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-5deg);
+    }
+
+        4% {
+        background: url(../img/call-me-0.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(5deg);
+    }
+
+        6% {
+        background: url(../img/call-me-0.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-5deg);
+    }
+
+    15% {
+        background: url(../img/call-me-1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    24% {
+        background: url(../img/call-me-2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    36% {
+        background: url(../img/call-me-3.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    100% {
+        background: url(../img/call-me-0.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.title2 {
+    width: 100%;
+    font-family: 'Title';
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 22px;
+    line-height: 1em;
+    text-align: left;
+}
+
+.footer {
+    background: #373C3F;
+    width: 100%;
+    height: 200px;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    gap: 2em;
+}
+
+    .social img {
+        width: 40px;
+        border-radius: 30px 30px 30px 0;
+    }
+
+        .social img:hover {
+            transition: all .2s ease-in-out;
+            transform: scale(1.25);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            border-radius: 30px 30px 30px 0;
+            -webkit-box-shadow: 10px -10px 5px -3px rgba(255, 114, 213, 0.6);
+            -moz-box-shadow: 10px -10px 5px -3px rgba(255, 114, 213, 0.6);
+            box-shadow: 10px -10px 5px -3px rgba(255, 114, 213, 0.6);
+        }
+
+.contact {
+    display: flex;
+    gap: 2em;
+    width: 50%;
+    margin: 5px auto auto;
+    font-family: 'Title';
+    font-size: 16px;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.year {
+    width: 100%;
+    margin: 25px auto;
+    font-family: 'Title';
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}

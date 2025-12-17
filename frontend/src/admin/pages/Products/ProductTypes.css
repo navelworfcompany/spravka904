@@ -1,0 +1,155 @@
+/* src/admin/pages/Products/ProductTypes.css */
+.products-page-adm-pro {
+  padding: 0;
+}
+
+.page-header-adm-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.header-content-adm-pro h1 {
+  margin: 8px 0 8px 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.header-content-adm-pro p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px 0;
+  margin-bottom: 8px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.create-type-btn,
+.create-product-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.create-type-btn:hover,
+.create-product-btn:hover {
+  background: #059669;
+}
+
+.products-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  color: #666;
+}
+
+.product-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.no-product-types,
+.no-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+}
+
+.no-types-icon,
+.no-products-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.no-product-types h3,
+.no-products h3 {
+  margin: 0 0 8px 0;
+  color: #ccc;
+}
+
+.no-product-types p,
+.no-products p {
+  margin: 0 0 20px 0;
+}
+
+.products-info {
+  background: #2d2d2d;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.products-info strong {
+  color: #fff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.loading-spinner {
+  font-size: 1.5rem;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .header-actions {
+    justify-content: center;
+  }
+  
+  .product-types-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

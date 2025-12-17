@@ -1,0 +1,48 @@
+/* src/admin/components/UI/Notification.css */
+.notification {
+  background: #2d2d2d;
+  border-left: 4px solid;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+  min-width: 300px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.notification--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notification--success { border-color: #10b981; }
+.notification--error { border-color: #ef4444; }
+.notification--warning { border-color: #f59e0b; }
+.notification--info { border-color: #3b82f6; }
+
+.notification-icon {
+  font-size: 1.2rem;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: #666;
+}

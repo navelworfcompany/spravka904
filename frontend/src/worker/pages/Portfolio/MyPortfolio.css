@@ -1,0 +1,909 @@
+/* src/worker/pages/Portfolio/MyPortfolio.css */
+.portfolio-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Заголовок страницы */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #fff 0%, #667eea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.portfolio-header > p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Статистика */
+.portfolio-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.stat-porwok-item {
+  width: 200px;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 16px;
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.stat-porwok-item:hover {
+  transform: translateY(-3px);
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Поиск */
+.portfolio-search {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.clear-search {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.clear-search:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Секции портфолио */
+.portfolio-sections {
+  display: grid;
+  gap: 3rem;
+}
+
+.portfolio-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.portfolio-section:hover {
+  border-color: #444;
+}
+
+.portfolio-section h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.portfolio-section > p {
+  color: #b0b0b0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Заголовок секции с кнопкой */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+}
+
+/* Сетка товаров */
+.products-porwok-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Карточки товаров */
+.portfolio-product-card,
+.available-product-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio-product-card {
+  border-left: 4px solid #27ae60;
+}
+
+.available-product-card {
+  border-left: 4px solid #667eea;
+}
+
+.portfolio-product-card:hover,
+.available-product-card:hover {
+  transform: translateY(-3px);
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Информация о товаре */
+.product-porwok-info {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.product-porwok-info h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.product-porwok-type {
+  color: #667eea;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.product-porwok-description {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.worker-price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.base-price,
+.product-porwok-price {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.product-porwok-materials,
+.product-porwok-sizes {
+  color: #888;
+  font-size: 0.8rem;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}
+
+.product-porwok-materials strong,
+.product-porwok-sizes strong {
+  color: #999;
+  font-weight: 500;
+}
+
+/* Действия с товарами */
+.product-actions {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.btn-pokwok {
+  margin: auto;
+}
+
+/* Состояния загрузки */
+.portfolio-loading,
+.products-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Пустые состояния */
+.empty-portfolio,
+.no-products {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed #333;
+  border-radius: 16px;
+  margin: 1rem 0;
+}
+
+.empty-icon,
+.no-products-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-portfolio h3,
+.no-products h3 {
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.empty-portfolio p,
+.no-products p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.products-porwok-grid > * {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .products-porwok-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    padding: 0 0.5rem;
+  }
+
+  .portfolio-header h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-stats {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    min-width: 120px;
+    padding: 1rem 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .portfolio-section {
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .section-header h2 {
+    text-align: center;
+  }
+
+  .products-porwok-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .portfolio-product-card,
+  .available-product-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .portfolio-stats {
+    gap: 1rem;
+  }
+
+  .stat-item {
+    min-width: calc(50% - 1rem);
+    padding: 1rem;
+  }
+
+  .portfolio-section {
+    padding: 1rem;
+  }
+
+  .products-porwok-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-input {
+    padding: 0.875rem 2.5rem 0.875rem 1rem;
+  }
+
+  .clear-search {
+    right: 0.75rem;
+  }
+}
+
+/* Плавное появление карточек с задержкой */
+.products-porwok-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.products-porwok-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.products-porwok-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.products-porwok-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.products-porwok-grid > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Кастомный скроллбар */
+.portfolio-page ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.portfolio-page ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+.portfolio-page ::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+.portfolio-page ::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Состояния ховера для кнопок в карточках */
+.product-actions button {
+  transition: all 0.3s ease;
+}
+
+.product-actions button:hover {
+  transform: translateY(-1px);
+}
+
+/* src/worker/pages/Portfolio/MyPortfolio.css */
+/* ... предыдущие стили остаются ... */
+
+/* Компактные карточки товаров */
+.portfolio-product-card,
+.available-product-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 280px; /* Уменьшаем высоту */
+}
+
+/* Компактный контейнер для изображения */
+.product-image-container {
+  width: 100%;
+  height: 120px; /* Уменьшаем высоту изображения */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.03);
+}
+
+/* Лейбл на изображении (компактный) */
+.product-image-label {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  z-index: 2;
+  line-height: 1;
+}
+
+.portfolio-product-card .product-image-label {
+  background: rgba(39, 174, 96, 0.9);
+}
+
+.available-product-card .product-image-label {
+  background: rgba(102, 126, 234, 0.9);
+}
+
+/* Иконка при отсутствии изображения */
+.no-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
+  color: #666;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+
+/* Компактная информация о товаре */
+.product-porwok-info {
+  flex: 1;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-porwok-info h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem; /* Уменьшаем шрифт */
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6rem; /* Уменьшаем высоту */
+}
+
+.product-porwok-type {
+  color: #667eea;
+  font-size: 0.8rem; /* Уменьшаем шрифт */
+  margin: 0;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.product-porwok-description {
+  color: #b0b0b0;
+  font-size: 0.8rem; /* Уменьшаем шрифт */
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6rem; /* Уменьшаем высоту */
+}
+
+/* Цены (компактные) */
+.worker-price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 0.9rem; /* Уменьшаем шрифт */
+  margin: 0.25rem 0;
+  padding: 0.35rem 0.5rem;
+  background: rgba(39, 174, 96, 0.1);
+  border-radius: 6px;
+  border-left: 2px solid #27ae60;
+  line-height: 1.2;
+}
+
+.base-price,
+.product-porwok-price {
+  color: #b0b0b0;
+  font-size: 0.8rem; /* Уменьшаем шрифт */
+  margin: 0.2rem 0;
+  padding: 0.3rem 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 5px;
+  line-height: 1.2;
+}
+
+/* Дополнительная информация (компактная) */
+.product-porwok-materials,
+.product-porwok-sizes {
+  color: #888;
+  font-size: 0.75rem; /* Уменьшаем шрифт */
+  margin: 0.15rem 0;
+  line-height: 1.2;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-porwok-materials strong,
+.product-porwok-sizes strong {
+  color: #999;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+/* Компактные действия с товарами */
+.product-actions {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.btn-pokwok {
+  width: 100%;
+  padding: 0.5rem; /* Уменьшаем padding */
+  font-size: 0.85rem; /* Уменьшаем шрифт */
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.btn-pokwok:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Плотная сетка товаров */
+.products-porwok-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Уменьшаем минимальную ширину */
+  gap: 1.25rem; /* Уменьшаем расстояние */
+  margin-top: 1.25rem;
+}
+
+/* Более компактные секции */
+.portfolio-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 1.5rem; /* Уменьшаем padding */
+  transition: all 0.3s ease;
+}
+
+.portfolio-section h2 {
+  color: #fff;
+  margin-bottom: 0.25rem; /* Уменьшаем отступ */
+  font-size: 1.25rem; /* Уменьшаем шрифт */
+  font-weight: 600;
+}
+
+.portfolio-section > p {
+  color: #b0b0b0;
+  margin-bottom: 1rem; /* Уменьшаем отступ */
+  font-size: 0.9rem; /* Уменьшаем шрифт */
+}
+
+/* Компактный заголовок страницы */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 2rem; /* Уменьшаем отступ */
+  padding: 1.5rem 0; /* Уменьшаем padding */
+  border-bottom: 1px solid #333;
+}
+
+.portfolio-header h1 {
+  font-size: 2rem; /* Уменьшаем шрифт */
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-header > p {
+  font-size: 1rem; /* Уменьшаем шрифт */
+  margin-bottom: 1.5rem;
+}
+
+/* Компактная статистика */
+.portfolio-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Уменьшаем расстояние */
+  margin-top: 1.5rem;
+}
+
+.stat-porwok-item {
+  text-align: center;
+  padding: 1rem 1.5rem; /* Уменьшаем padding */
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  min-width: 120px; /* Уменьшаем ширину */
+}
+
+.stat-number {
+  font-size: 2rem; /* Уменьшаем шрифт */
+}
+
+.stat-label {
+  font-size: 0.85rem; /* Уменьшаем шрифт */
+}
+
+/* Адаптивность для компактных карточек */
+@media (max-width: 1200px) {
+  .products-porwok-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-image-container {
+    height: 110px;
+  }
+  
+  .portfolio-product-card,
+  .available-product-card {
+    min-height: 260px;
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-porwok-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.875rem;
+  }
+  
+  .portfolio-section {
+    padding: 1.25rem;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .portfolio-stats {
+    gap: 1rem;
+  }
+  
+  .stat-porwok-item {
+    min-width: 100px;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+  
+  .product-image-container {
+    height: 100px;
+  }
+  
+  .portfolio-product-card,
+  .available-product-card {
+    min-height: 250px;
+  }
+  
+  .product-porwok-info h4 {
+    font-size: 0.95rem;
+    min-height: 2.4rem;
+  }
+  
+  .product-porwok-description {
+    min-height: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-porwok-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .portfolio-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .stat-porwok-item {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .portfolio-product-card,
+  .available-product-card {
+    min-height: 240px;
+    padding: 0.75rem;
+  }
+  
+  .product-image-container {
+    height: 90px;
+  }
+  
+  .product-porwok-description {
+    display: none; /* Скрываем описание на очень маленьких экранах */
+  }
+  
+  .worker-price,
+  .base-price,
+  .product-porwok-price {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Дополнительные улучшения для компактности */
+
+/* Уменьшаем padding в search */
+.portfolio-search {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Компактный section header */
+.section-header {
+  margin-bottom: 0.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Компактный заголовок секций */
+.portfolio-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Уменьшаем отступы между секциями */
+.portfolio-sections {
+  gap: 2rem;
+}
+
+/* Текст при пустых состояниях */
+.empty-portfolio,
+.no-products {
+  padding: 2rem 1rem;
+}
+
+.empty-icon,
+.no-products-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.empty-portfolio h3,
+.no-products h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Эффект при наведении на всю карточку */
+.portfolio-product-card:hover,
+.available-product-card:hover {
+  transform: translateY(-2px);
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Улучшенная анимация появления */
+@keyframes fadeInUpCompact {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.products-porwok-grid > * {
+  animation: fadeInUpCompact 0.4s ease-out;
+}

@@ -1,0 +1,381 @@
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.price-modal {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid #333;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px 20px 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modal-header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.close-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  color: #b0b0b0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #667eea;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.product-info {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #667eea;
+  border: 1px solid #333;
+}
+
+.product-info h4 {
+  color: #fff;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.product-type {
+  color: #667eea;
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-type::before {
+  content: '📦';
+  font-size: 1rem;
+}
+
+.base-price {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  border-left: 2px solid #667eea;
+}
+
+.price-porwok-input-group {
+  margin-bottom: 2rem;
+}
+
+.price-porwok-input-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-porwok-input-group label::before {
+  content: '💰';
+  font-size: 1.1rem;
+}
+
+.price-porwok-input-group input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.price-porwok-input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.price-porwok-input-group input::placeholder {
+  color: #ffffff;
+}
+
+.price-porwok-input-group small {
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: block;
+  line-height: 1.4;
+}
+
+.modal-porwok-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.price-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.price-modal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+}
+
+.price-modal::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.price-modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.price-input-group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.05);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.price-input-group input:valid:not(:focus):not(:placeholder-shown) {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.05);
+}
+
+.modal-porwok-actions button {
+  min-width: 120px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-porwok-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.modal-porwok-actions button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .price-modal {
+    max-width: 90%;
+    margin: 1rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .product-info {
+    padding: 1.25rem;
+  }
+
+  .product-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .price-porwok-input-group input {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  .modal-porwok-actions {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+
+  .modal-porwok-actions button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .close-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .price-modal {
+    max-width: 95%;
+    border-radius: 16px;
+  }
+
+  .modal-header {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+}
+
+.loading-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.loading-indicator::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #667eea;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.price-porwok-input-group input:focus,
+.close-button:focus,
+.modal-actions button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.price-porwok-input-group input {
+  background-image: linear-gradient(to right, #667eea86, transparent 100%);
+  background-position: left bottom;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-bottom: 1px solid #444;
+  border-radius: 10px 10px 0 0;
+}
+
+.price-porwok-input-group input:focus {
+  background-size: 100% 2px;
+  background-image: linear-gradient(to right, #484e69, #b67eee 100%);
+}
+
+.price-porwok-input-group::after {
+  content: '💡 Совет: Укажите конкурентную цену, но не занижайте её слишком сильно';
+  display: block;
+  color: #fdfdfd;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  border-left: 2px solid #f39c12;
+}

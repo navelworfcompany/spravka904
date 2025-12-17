@@ -1,0 +1,138 @@
+.operator-stat-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.operator-stat-card--clickable {
+  cursor: pointer;
+}
+
+.operator-stat-card--clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #444;
+}
+
+.operator-stat-card--priority {
+  border-left: 4px solid;
+}
+
+.operator-stat-card--priority:hover {
+  transform: translateY(-3px);
+}
+
+/* Цвета для приоритетных карточек */
+.operator-stat-card--red.operator-stat-card--priority {
+  border-left-color: #ef4444;
+}
+
+.operator-stat-card--orange.operator-stat-card--priority {
+  border-left-color: #f59e0b;
+}
+
+.operator-stat-card--yellow.operator-stat-card--priority {
+  border-left-color: #eab308;
+}
+
+.operator-stat-card--blue.operator-stat-card--priority {
+  border-left-color: #3b82f6;
+}
+
+.operator-stat-card--purple.operator-stat-card--priority {
+  border-left-color: #8b5cf6;
+}
+
+.operator-stat-card--green.operator-stat-card--priority {
+  border-left-color: #10b981;
+}
+
+.operator-stat-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.operator-stat-card__icon {
+  font-size: 32px;
+  opacity: 0.8;
+}
+
+.operator-stat-card__badge {
+  background-color: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.operator-stat-card__content {
+  position: relative;
+}
+
+.operator-stat-card__title {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.operator-stat-card__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.operator-stat-card__subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.operator-stat-card__action {
+  font-size: 12px;
+  color: #4dabf7;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.operator-stat-card--clickable:hover .operator-stat-card__action {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Цветовые вариации */
+.operator-stat-card--blue .operator-stat-card__value {
+  color: #3b82f6;
+}
+
+.operator-stat-card--red .operator-stat-card__value {
+  color: #ef4444;
+}
+
+.operator-stat-card--orange .operator-stat-card__value {
+  color: #f59e0b;
+}
+
+.operator-stat-card--yellow .operator-stat-card__value {
+  color: #eab308;
+}
+
+.operator-stat-card--purple .operator-stat-card__value {
+  color: #8b5cf6;
+}
+
+.operator-stat-card--green .operator-stat-card__value {
+  color: #10b981;
+}

@@ -1,0 +1,191 @@
+/* src/admin/components/Products/ProductTypeCard.css */
+.product-type-card {
+  background: #2d2d2d;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.product-type-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-type-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.type-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  word-break: break-word;
+  flex: 1;
+}
+
+.type-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: #404040;
+  transform: scale(1.1);
+}
+
+.edit-btn:hover { background: #f59e0b; }
+.view-btn:hover { background: #3b82f6; }
+.save-btn:hover { background: #10b981; }
+.cancel-btn:hover { background: #ef4444; }
+.delete-btn:hover { background: #ef4444; }
+
+.product-type-body {
+  border-top: 1px solid #404040;
+  padding-top: 12px;
+}
+
+.type-description {
+  margin: 0 0 12px 0;
+  color: #ccc;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.edit-input {
+  background: #363636;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.edit-textarea {
+  background: #363636;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  width: 100%;
+  resize: vertical;
+  min-height: 60px;
+  margin-bottom: 12px;
+  font-family: inherit;
+}
+
+.edit-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.type-stats-ad-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid #404040;
+}
+
+.stat-item-ad-pro {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label-ad-pro {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.stat-value-ad-pro {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* В ProductCard.css и ProductTypeCard.css добавьте: */
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-text {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.product-image-display,
+.type-image-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image,
+.type-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .product-type-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .type-actions {
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .type-stats-ad-pro {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}

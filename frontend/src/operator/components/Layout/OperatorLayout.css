@@ -1,0 +1,54 @@
+.operator-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.operator-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.operator-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+.operator-notifications {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.operator-access-denied {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212;
+}
+
+.operator-access-denied-card {
+  background-color: #2d2d2d;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ff4444;
+}
+
+.operator-access-denied-card h2 {
+  color: #ff4444;
+  margin-bottom: 20px;
+}
+
+.operator-access-denied-card p {
+  color: #b0b0b0;
+  margin-bottom: 10px;
+}

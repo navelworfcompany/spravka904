@@ -1,0 +1,98 @@
+.operator-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.operator-modal-content {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.operator-modal-small {
+  width: 400px;
+  max-width: 100%;
+}
+
+.operator-modal-medium {
+  width: 600px;
+  max-width: 100%;
+}
+
+.operator-modal-large {
+  width: 800px;
+  max-width: 100%;
+}
+
+.operator-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operator-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.operator-modal-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.operator-modal-close:hover {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.operator-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .operator-modal-small,
+  .operator-modal-medium,
+  .operator-modal-large {
+    width: 95%;
+  }
+  
+  .operator-modal-header {
+    padding: 15px;
+  }
+  
+  .operator-modal-body {
+    padding: 15px;
+  }
+}

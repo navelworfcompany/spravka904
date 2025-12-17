@@ -1,0 +1,70 @@
+/* src/admin/components/Layout/Sidebar.css */
+.sidebar {
+  background: #2d2d2d;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar--open {
+  width: 250px;
+}
+
+.sidebar--closed {
+  width: 60px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #404040;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sidebar-nav {
+  padding: 10px 0;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sidebar-nav-item:hover {
+  background: #404040;
+  color: #fff;
+}
+
+.sidebar-nav-item--active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.sidebar-nav-icon {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  min-width: 20px;
+}
+
+.sidebar-nav-label {
+  font-weight: 500;
+}

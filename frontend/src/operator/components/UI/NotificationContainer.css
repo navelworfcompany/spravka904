@@ -1,0 +1,113 @@
+.operator-notifications-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 340px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.operator-notifications-header {
+  background-color: #1f1f1f;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #333;
+  border-bottom: none;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.operator-notifications-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.operator-notifications-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.operator-notifications-clear-btn {
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  pointer-events: auto;
+}
+
+.operator-notifications-clear-btn:hover {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.operator-notifications-list {
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: transparent;
+  pointer-events: auto;
+  overflow-x: hidden;
+}
+
+.operator-notifications-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.operator-notifications-list::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 0 0 8px 8px;
+}
+
+.operator-notifications-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+.operator-notifications-list::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Пульсирующая анимация для непрочитанных уведомлений */
+@keyframes operator-notification-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(77, 171, 247, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(77, 171, 247, 0);
+  }
+}
+
+.operator-notification--unread {
+  animation: operator-notification-pulse 2s infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .operator-notifications-container {
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .operator-notifications-header {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .operator-notifications-container {
+    top: 60px;
+    right: 5px;
+    left: 5px;
+  }
+}

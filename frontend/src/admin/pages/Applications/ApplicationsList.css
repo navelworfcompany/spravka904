@@ -1,0 +1,373 @@
+/* src/admin/pages/Applications/ApplicationsList.css */
+.applications-page-a {
+  padding: 0;
+}
+
+.page-header-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.header-content-a h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.header-content-a p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.header-stats-a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.total-count-a {
+  background: #363636;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.total-count-a strong {
+  color: #fff;
+}
+
+.application-id {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.client-name {
+  font-weight: 500;
+  color: #fff;
+}
+
+.client-phone {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.status-new { background: #575757; color: white; }
+.status-pending { background: #38662c; color: white; }
+.status-in_progress { background: #f59e0b; color: white; }
+.status-completed { background: #3b82f6; color: white; }
+.status-cancelled { background: #ef4444; color: white; }
+.status-for_delete { background: #ff00d4; color: white; }
+.status-assigned { background: #00d9ff; color: white; }
+
+.response-count {
+  background: #363636;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.response-count.has-responses {
+  background: #3b82f6;
+  color: white;
+}
+
+.table-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #404040;
+  transform: scale(1.1);
+}
+
+.view-btn:hover { background: #3b82f6; }
+.start-btn:hover { background: #f59e0b; }
+.complete-btn:hover { background: #10b981; }
+
+.pagination-info {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  color: #888;
+  font-size: 0.9rem;
+  background: #2d2d2d;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #404040;
+}
+
+.table-actions {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.view-btn:hover {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.start-btn:hover {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.complete-btn:hover {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.delete-btn:hover {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* Стили для модального окна удаления */
+.delete-confirmation-adm-app {
+  padding: 10px 0;
+}
+
+.application-preview-adm-app {
+  background: #5a5a5a;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+  border-left: 4px solid #d32f2f;
+}
+
+.application-preview-adm-app p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.delete-warning-adm-app {
+  color: #eeff00;
+  font-weight: 600;
+  background: #424242;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+  margin: 15px 0;
+}
+
+.modal-actions-adm-app {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-adm-app {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-adm-app {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.btn-secondary-adm-app:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.btn-danger-adm-app {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-danger-adm-app:hover:not(:disabled) {
+  background-color: #c62828;
+}
+
+.btn-adm-app:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Стили для админ-бейджа */
+.admin-badge {
+  background: #d32f2f;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.header-stats {
+  display: flex;
+  align-items: center;
+}
+
+.status-for_deletion {
+  background-color: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #DC2626;
+  animation: pulse-deletion 2s infinite;
+}
+
+@keyframes pulse-deletion {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* Стиль для строки с заявкой на удаление */
+status-for_delete {
+  background-color: #FEE2E2 !important;
+  color: #DC2626 !important;
+  border: 1px solid #DC2626 !important;
+  animation: pulse-deletion 2s infinite;
+  font-weight: 600;
+}
+
+@keyframes pulse-deletion {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* Стиль для ВСЕЙ строки с заявкой на удаление */
+.data-table-row.status-for_delete {
+  background-color: #FEF2F2 !important;
+  border-left: 4px solid #DC2626 !important;
+}
+
+.data-table-row.status-for_delete:hover {
+  background-color: #FEE2E2 !important;
+  transform: translateX(2px);
+  transition: all 0.3s ease;
+}
+
+/* Иконка предупреждения для заявок на удаление */
+.deletion-warning {
+  color: #DC2626;
+  margin-right: 6px;
+  font-size: 14px;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.3;
+  }
+}
+
+/* Специальные стили для ячеек в строке на удаление */
+.data-table-row.status-for_delete td {
+  border-bottom: 1px solid #FECACA !important;
+}
+
+.data-table-row.status-for_delete .client-name {
+  color: #DC2626;
+  font-weight: 600;
+}
+
+.data-table-row.status-for_delete .application-id {
+  color: #DC2626;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .header-stats {
+    justify-content: flex-start;
+  }
+  
+  .table-actions {
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .action-btn {
+    padding: 4px;
+  }
+}

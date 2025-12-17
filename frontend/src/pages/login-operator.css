@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Gilroy.otf);
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url(../fonts/Gilroy-Light.otf);
+}
+
+.login-operator-page {
+  min-height: 100vh;
+  background: url(../img/bg-o.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loading-operator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.login-operator-container {
+  background: rgb(58, 58, 58);
+  border-radius: 25px;
+  border: 3px outset #e0e0e0;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  animation: slideUp 0.5s ease-out;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-operator-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-operator-header h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-family: 'Title';
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.login-operator-header p {
+  font-size: 1.1rem;
+  font-family: 'Text';
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.login-operator-form {
+  margin-bottom: 30px;
+}
+
+.form-operator-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.password-operator-field {
+  position: relative;
+}
+
+.password-operator-toggle {
+  position: absolute;
+  right: 12px;
+  top: 45%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.password-operator-toggle:hover {
+  background-color: #f8f9fa;
+}
+
+.password-operator-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-operator-button {
+  width: fit-content;
+  height: 50px;
+  padding: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+}
+
+.login-operator-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .login-operator-container {
+    padding: 30px 25px;
+    margin: 20px;
+  }
+
+  .login-operator-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .role-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .role-btn {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 12px 15px;
+  }
+
+  .role-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-operator-page {
+    padding: 10px;
+  }
+
+  .login-operator-container {
+    padding: 25px 20px;
+    margin: 10px;
+  }
+
+  .login-operator-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .login-operator-header p {
+    font-size: 1rem;
+  }
+
+}
+
+/* Анимация для кнопки входа */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.login-operator-button:not(:disabled):hover {
+  animation: buttonPulse 0.3s ease;
+}
+
+/* Стили для состояний полей ввода */
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input.error {
+  border-color: var(--danger-color);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  font-family: "Text";
+  color: #D13980;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 0.8rem;
+}

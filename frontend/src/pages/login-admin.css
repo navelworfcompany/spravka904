@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Title';
+    src: url(../fonts/Gilroy.otf);
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url(../fonts/Gilroy-Light.otf);
+}
+
+.login-admin-page {
+  min-height: 100vh;
+  background: url(../img/bg-a.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.login-admin-container {
+  background: rgb(58, 58, 58);
+  border-radius: 25px;
+  border: 3px outset #e0e0e0;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  animation: slideUp 0.5s ease-out;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-admin-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-admin-header h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-family: 'Title';
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.login-admin-header p {
+  font-size: 1.1rem;
+  font-family: 'Text';
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.login-admin-form {
+  margin-bottom: 30px;
+}
+
+.form-admin-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.password-admin-field {
+  position: relative;
+}
+
+.password-admin-toggle {
+  position: absolute;
+  right: 12px;
+  top: 45%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.password-admin-toggle:hover {
+  background-color: #f8f9fa;
+}
+
+.password-admin-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-admin-button {
+  width: fit-content;
+  height: 50px;
+  padding: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+}
+
+.login-admin-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* В login-admin.css добавьте */
+.redirecting-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  flex-direction: column;
+}
+
+.redirecting-content {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.redirecting-content h2 {
+  color: #28a745;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.redirecting-content p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Анимация появления */
+.redirecting-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .login-admin-container {
+    padding: 30px 25px;
+    margin: 20px;
+  }
+
+  .login-admin-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .role-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .role-btn {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 12px 15px;
+  }
+
+  .role-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-admin-page {
+    padding: 10px;
+  }
+
+  .login-admin-container {
+    padding: 25px 20px;
+    margin: 10px;
+  }
+
+  .login-admin-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .login-admin-header p {
+    font-size: 1rem;
+  }
+
+}
+
+/* Анимация для кнопки входа */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.login-admin-button:not(:disabled):hover {
+  animation: buttonPulse 0.3s ease;
+}
+
+/* Стили для состояний полей ввода */
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input.error {
+  border-color: var(--danger-color);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  font-family: "Text";
+  color: #D13980;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 0.8rem;
+}
