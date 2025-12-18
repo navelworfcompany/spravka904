@@ -60,10 +60,10 @@ app.use(cors({
       'http://localhost:5173',
       'http://127.0.0.1:5173',
       // Production URLs
-      'https://spravka904.ru',
-      'http://spravka904.ru',
-      'https://www.spravka904.ru',
-      'http://www.spravka904.ru',
+      'https://spravka940.ru',
+      'http://spravka940.ru',
+      'https://www.spravka940.ru',
+      'http://www.spravka940.ru',
       // IP адрес сервера
       'http://155.212.216.198',
       'https://155.212.216.198',
