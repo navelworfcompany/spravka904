@@ -106,31 +106,55 @@ const ProductSelection = ({ isOpen, onClose, onSubmit }) => {
   }, [minPrices]);
 
   const getImageUrl = (imagePath, fallbackType = 'product') => {
-    if (!imagePath) {
-      return fallbackType === 'type' ? defaultTypeImage : defaultProductImage;
-    }
-
-    let cleanPath = imagePath;
-    if (imagePath.includes('/uploads/products/')) {
-      cleanPath = imagePath.replace('/uploads/products/', '/img/products/');
-    } else if (imagePath.includes('/uploads/types/')) {
-      cleanPath = imagePath.replace('/uploads/types/', '/img/types/');
-    } else if (imagePath.includes('/uploads/')) {
-      cleanPath = imagePath.replace('/uploads/', '/img/');
-    }
-
-    if (cleanPath.startsWith('http')) return cleanPath;
-
-    if (cleanPath.startsWith('/')) {
-      const baseUrl = process.env.NODE_ENV === 'development'
-        ? 'http://localhost:3001'
-        : window.location.origin;
-
-      return `${baseUrl}${cleanPath}`;
-    }
-
+  // Если путь пустой или не определен
+  if (!imagePath || imagePath === 'null' || imagePath === 'undefined') {
     return fallbackType === 'type' ? defaultTypeImage : defaultProductImage;
-  };
+  }
+
+  // Логируем для отладки
+  console.log('🖼️ Image path processing:', {
+    original: imagePath,
+    type: fallbackType
+  });
+
+  // Если уже полный URL (включая localhost или домен)
+  if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    return imagePath;
+  }
+
+  // Если путь уже начинается с /img/, используем как есть
+  if (imagePath.startsWith('/img/')) {
+    // В разработке добавляем базовый URL
+    if (process.env.NODE_ENV === 'development') {
+      return `http://localhost:3001${imagePath}`;
+    }
+    // В продакшене относительный путь
+    return imagePath;
+  }
+
+  // Если путь из базы данных (без префикса /img/)
+  let cleanPath = imagePath;
+  
+  // Убираем любые дублирующиеся пути
+  if (!cleanPath.startsWith('/')) {
+    cleanPath = '/' + cleanPath;
+  }
+  
+  // Проверяем корректность пути
+  if (!cleanPath.startsWith('/img/')) {
+    cleanPath = `/img/${cleanPath.replace(/^\//, '')}`;
+  }
+
+  console.log('🖼️ Final image path:', cleanPath);
+
+  // В разработке добавляем базовый URL
+  if (process.env.NODE_ENV === 'development') {
+    return `http://localhost:3001${cleanPath}`;
+  }
+
+  // В продакшене возвращаем относительный путь
+  return cleanPath;
+};
 
   const updateSizesForMaterial = useCallback((materialValue) => {
     const selectedMaterial = materials.find(m => m.value === materialValue);
